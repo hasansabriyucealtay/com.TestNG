@@ -3,9 +3,7 @@ package utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
@@ -49,16 +47,6 @@ public class Driver {
                 driver= new SafariDriver();
                 break;
 
-                case "MicrosoftEdge":
-                WebDriverManager.edgedriver().setup();
-                driver=new EdgeDriver();
-                break;
-
-                case "InternetExpoler":
-                WebDriverManager.iedriver().setup();
-                driver=new InternetExplorerDriver();
-                break;
-
                 default:
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
@@ -81,5 +69,12 @@ public class Driver {
             driver=null;
         }
 
+    }
+
+    public static void quitDriver(){
+        if (driver != null){
+            driver.quit();
+            driver=null;
+        }
     }
 }
