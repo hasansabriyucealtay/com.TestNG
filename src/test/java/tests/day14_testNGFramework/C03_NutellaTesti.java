@@ -1,8 +1,6 @@
-package tests.day14_TestNGFramework;
+package tests.day14_testNGFramework;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AmazonPage;

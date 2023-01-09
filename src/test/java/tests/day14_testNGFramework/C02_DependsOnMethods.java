@@ -1,4 +1,4 @@
-package tests.day14_TestNGFramework;
+package tests.day14_testNGFramework;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
